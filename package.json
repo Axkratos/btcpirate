@@ -7,13 +7,9 @@
   "homepage": "https://axkratos.github.io/btcpirate",
   "scripts": {
     "predeploy": "npm run build",
-
-    "start":"npm run dev",
-   
-  "build": "vite build",
-  "deploy": "gh-pages -d dist",
-
-
+    "start": "npm run dev",
+    "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -24,6 +20,7 @@
     "@mui/material": "^6.0.0",
     "axios": "^1.7.5",
     "dotenv": "^16.4.5",
+    "nginx": "^1.0.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-transition-group": "^4.4.5"
