@@ -4,9 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "proxy": "https://btcpirate-dry-wind-3478.fly.dev",
+  "homepage": "https://axkratos.github.io/btcpirate",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "predeploy": "npm run build",
+
+
+   
+  "build": "vite build",
+  "deploy": "gh-pages -d dist",
+
+
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -30,6 +37,7 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "vite": "^5.4.1"
   }
