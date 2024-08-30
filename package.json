@@ -3,12 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://btcpirate-dry-wind-3478.fly.dev",
+  "proxy": "http://localhost:5000",
   "homepage": "https://axkratos.github.io/btcpirate",
   "scripts": {
     "predeploy": "npm run build",
     "start": "npm run dev",
     "build": "vite build",
+    "dev": "vite",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -22,7 +23,9 @@
     "dotenv": "^16.4.5",
     "nginx": "^1.0.8",
     "react": "^18.3.1",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.3.1",
+    
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {

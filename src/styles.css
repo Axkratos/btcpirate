@@ -1,0 +1,28 @@
+/* styles.css */
+.container {
+    height: 100%;
+    background-color: #2A9D8F;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.treasure-map-card {
+    padding: 16px;
+    background: url('https://example.com/your-torn-paper-texture.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    color: #264653;
+    border: 2px solid #264653;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.log-entry {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #E9C46A;
+    margin-bottom: 8px;
+    border: 1px solid #264653;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,78 @@
+/* animations.css */
+
+/* Animation for log transitions */
+.log-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .log-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+  }
+  
+  .log-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .log-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+  }
+  
+  /* Skeleton loader animation */
+  .MuiSkeleton-root {
+    border-radius: 8px;
+  }
+  
+  /* Optional: Icon spin animation (for loading) */
+  .icon-spin {
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Optional: Notification Dialog Animation */
+  .dialog-notification-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .dialog-notification-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in, transform 300ms ease-in;
+  }
+  
+  .dialog-notification-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dialog-notification-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms ease-in, transform 300ms ease-in;
+  }
+  
+
+  @keyframes mining {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.mining-animation {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: mining 1s linear infinite;
+    margin: 0 auto;
+}
