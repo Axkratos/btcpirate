@@ -1,51 +1,30 @@
 import React from 'react';
-import { Grid, Box, useMediaQuery, useTheme } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import LeftComponent from './LeftComponent';
-import CenterComponent from './CenterComponent';
-import RightComponent from './RightComponent';
-import Navbar from './Navbar'; // Ensure this import matches your file structure
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const theme = createTheme({
-    palette: {
-        primary: { main: '#264653' },
-        secondary: { main: '#E76F51' },
-        background: { default: '#F4A261' },
-    },
-    typography: { fontFamily: 'Trebuchet MS, sans-serif' },
-});
+import Home from './Home'
+
+import AboutUs from './about';
+import PrivacyPolicy from './privacy';
+import TermsOfService from './tos';
+import Navbar from './navbar';
 
 const App = () => {
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
     return (
-        <ThemeProvider theme={theme}>
-            <Box
-                sx={{
-                    minHeight: '100vh',
-                    padding: '20px',
-                    backgroundColor: theme.palette.background.default,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    overflow: 'hidden',
-                }}
-            >
-                {!isSmallScreen && <Navbar />}
-                <Grid container spacing={3} sx={{ flexGrow: 1 }}>
-                    <Grid item xs={12} sm={4} md={3}>
-                        <LeftComponent />
-                    </Grid>
-                    <Grid item xs={12} sm={8} md={6}>
-                        <CenterComponent />
-                    </Grid>
-                    <Grid item xs={12} sm={4} md={3}>
-                        <RightComponent />
-                    </Grid>
-                </Grid>
-            </Box>
-        </ThemeProvider>
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                
+            </Routes>
+        </Router>
     );
 };
+
+// Define a simple Home component or import it if you have one
+
 
 export default App;

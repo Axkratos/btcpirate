@@ -3,6 +3,7 @@ import { Box, Typography, Paper, Collapse } from '@mui/material';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { styled } from '@mui/system';
 
+// Styled component for the section title
 const SectionTitle = styled(Typography)(({ theme }) => ({
     color: theme.palette.primary.main,
     fontWeight: 'bold',
@@ -19,11 +20,12 @@ const HowItWorks = () => {
             justifyContent="center"
             height="100vh" // Ensure the container takes up the full viewport height
             p={2}
+            sx={{ backgroundColor: theme => theme.palette.background.default }}
         >
             <Collapse in={true} timeout={1000}>
-                <Paper elevation={5} style={{ padding: '20px', backgroundColor: '#F4A261', borderRadius: '8px' }}>
+                <Paper elevation={5} style={{ padding: '20px', backgroundColor: '#E9C46A', borderRadius: '8px' }}>
                     <SectionTitle variant="h5">
-                        <HelpOutlineIcon style={{ marginRight: '10px', color: '#E76F51' }} />
+                        <HelpOutlineIcon style={{ marginRight: '10px', color: '#2A9D8F' }} />
                         How It Works
                     </SectionTitle>
                     <Typography variant="body1" style={{ color: '#264653', marginBottom: '10px' }}>
