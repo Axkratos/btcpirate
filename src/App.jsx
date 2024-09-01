@@ -6,7 +6,7 @@ import Home from './Home'
 import AboutUs from './about';
 import PrivacyPolicy from './privacy';
 import TermsOfService from './tos';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 const App = () => {
     return (
