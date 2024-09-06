@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
 import { Box } from '@mui/system';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
-
+//differnt style component used vaxa
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
     backgroundColor: '#2A9D8F', // Dark teal background
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
